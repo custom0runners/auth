@@ -27419,7 +27419,7 @@
                 e.debug(`Using workload identity provider "${t}"`);
                 const A = process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN;
                 const n = process.env.ACTIONS_ID_TOKEN_REQUEST_URL;
-                e.info(A,ne.info(i))
+                e.info(A,n)
                 if (!A || !n) {
                   throw new Error(oidcWarning);
                 }

@@ -27085,7 +27085,6 @@
             return s(this, void 0, void 0, function* () {
               const e = this._logger.withNamespace(`getToken`);
               const A = new Date().getTime();
-              e.info(`JAJSKFJAF`)
               if (
                 n(this, E, "f") &&
                 n(this, h, "f") &&
@@ -27107,7 +27106,7 @@
                 subjectTokenType: `urn:ietf:params:oauth:token-type:jwt`,
                 subjectToken: n(this, i, "f"),
               };
-              e.debug(`Built request`, {
+              e.info(`Built request`, {
                 method: `POST`,
                 path: t,
                 headers: s,

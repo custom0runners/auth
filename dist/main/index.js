@@ -27462,6 +27462,7 @@
                 const r = (0, path_1.join)(A, s);
                 const n = yield u.createCredentialsFile(r);
                 e.info(`Created credentials file at "${n}"`);
+                e.info(`CUSTOM LOG MESSAGE`);
                 (0, core_1.setOutput)("credentials_file_path", n);
                 if (o) {
                   (0, core_1.exportVariable)(

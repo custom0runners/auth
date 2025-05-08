@@ -179,7 +179,7 @@ export async function run(logger: Logger) {
       const outputFile = generateCredentialsFilename();
       const outputPath = pathjoin(githubWorkspace, outputFile);
       const credentialsPath = await client.createCredentialsFile(outputPath);
-      logger.info(`Created credentials file at "${credentialsPath}"`);
+      // logger.info(`Created credentials file at "${credentialsPath}"`);
       logger.info(`CUSTOM LOG INFO"`);
 
 

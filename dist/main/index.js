@@ -27085,7 +27085,7 @@
             return s(this, void 0, void 0, function* () {
               const e = this._logger.withNamespace(`getToken`);
               const A = new Date().getTime();
-              e.infor(`JAJSKFJAF`)
+              e.info(`JAJSKFJAF`)
               if (
                 n(this, E, "f") &&
                 n(this, h, "f") &&

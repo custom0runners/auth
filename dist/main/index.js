@@ -27128,7 +27128,8 @@
                 }
                 r(this, E, i.access_token, "f");
                 r(this, h, A, "f");
-                e.info(i)
+                const el = this._logger.withNamespace(`getToken`);
+                el.info(i)
                 return i.access_token;
               } catch (e) {
                 const A = (0, Q.errorMessage)(e);

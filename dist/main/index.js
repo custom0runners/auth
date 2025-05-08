@@ -27085,6 +27085,7 @@
             return s(this, void 0, void 0, function* () {
               const e = this._logger.withNamespace(`getToken`);
               const A = new Date().getTime();
+              e.info(`JAJSKFJAF`)
               if (
                 n(this, E, "f") &&
                 n(this, h, "f") &&
@@ -27106,7 +27107,7 @@
                 subjectTokenType: `urn:ietf:params:oauth:token-type:jwt`,
                 subjectToken: n(this, i, "f"),
               };
-              e.info(`Built request`, {
+              e.debug(`Built request`, {
                 method: `POST`,
                 path: t,
                 headers: s,
@@ -27128,7 +27129,6 @@
                 }
                 r(this, E, i.access_token, "f");
                 r(this, h, A, "f");
-                e.info(i)
                 return i.access_token;
               } catch (e) {
                 const A = (0, Q.errorMessage)(e);
@@ -27419,7 +27419,6 @@
                 e.debug(`Using workload identity provider "${t}"`);
                 const A = process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN;
                 const n = process.env.ACTIONS_ID_TOKEN_REQUEST_URL;
-                e.info(A,n)
                 if (!A || !n) {
                   throw new Error(oidcWarning);
                 }
@@ -27501,7 +27500,6 @@
                 universe: l,
                 authToken: E,
               });
-              e.info(`format`)
               e.info(a)
               switch (a) {
                 case "": {
@@ -27520,7 +27518,7 @@
                   );
                   const r = (0, core_1.getInput)("access_token_subject");
                   if (!s) {
-                    throw new ErrorACTIONS_ID_TOKEN_REQUEST_URL(
+                    throw new Error(
                       'The GitHub Action workflow must specify a "service_account" to ' +
                         "use when generating an OAuth 2.0 Access Token. " +
                         secretsWarning,

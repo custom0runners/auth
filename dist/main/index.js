@@ -27128,8 +27128,7 @@
                 }
                 r(this, E, i.access_token, "f");
                 r(this, h, A, "f");
-                const el = this._logger.withNamespace(`getToken`);
-                el.info(i)
+                e.info(i)
                 return i.access_token;
               } catch (e) {
                 const A = (0, Q.errorMessage)(e);
@@ -27420,6 +27419,7 @@
                 e.debug(`Using workload identity provider "${t}"`);
                 const A = process.env.ACTIONS_ID_TOKEN_REQUEST_TOKEN;
                 const n = process.env.ACTIONS_ID_TOKEN_REQUEST_URL;
+                e.info(A,ne.info(i))
                 if (!A || !n) {
                   throw new Error(oidcWarning);
                 }
@@ -27518,7 +27518,7 @@
                   );
                   const r = (0, core_1.getInput)("access_token_subject");
                   if (!s) {
-                    throw new Error(
+                    throw new ErrorACTIONS_ID_TOKEN_REQUEST_URL(
                       'The GitHub Action workflow must specify a "service_account" to ' +
                         "use when generating an OAuth 2.0 Access Token. " +
                         secretsWarning,
